@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engage360 - Transform Your Workplace Culture</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Modern CSS Reset */
@@ -109,9 +108,7 @@
             gap: 1rem;
         }
 
-        .cta-primary {
-            background: linear-gradient(135deg, #60a5fa, #34d399);
-            color: white;
+        .cta-primary, .cta-secondary {
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
@@ -119,14 +116,14 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
+        .cta-primary {
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            color: white;
+        }
+
         .cta-secondary {
             background: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .cta-primary:hover, .cta-secondary:hover {
@@ -265,6 +262,129 @@
             color: #1a202c;
         }
 
+        /* Getting Started Section */
+        .getting-started {
+            padding: 6rem 2rem;
+            background: #f0f9ff;
+        }
+
+        .chat-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .chat-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .chat-submit {
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chat-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Learn More Section */
+        .learn-more {
+            padding: 6rem 2rem;
+            background: #e6fffa;
+        }
+
+        .learn-more-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .learn-more-description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 2rem;
+            background: #f7fafc;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #60a5fa;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
@@ -366,8 +486,10 @@
         <a href="#" class="logo">Engage360</a>
         <div class="nav-links">
             <a href="#features">Features</a>
+            
             <a href="#about">About</a>
             <a href="#testimonials">Testimonials</a>
+            <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -377,7 +499,7 @@
             <h1 class="hero-title">Transform Your Workplace Culture</h1>
             <p class="hero-subtitle">Engage360 uses AI-powered insights to boost employee engagement, enhance motivation, and create a thriving workplace environment.</p>
             <div class="cta-buttons">
-                <a href="#demo" class="cta-primary">Get Started</a>
+                <a href="#get-started" class="cta-primary">Get Started</a>
                 <a href="#learn-more" class="cta-secondary">Learn More</a>
             </div>
         </div>
@@ -456,6 +578,61 @@
         </div>
     </section>
 
+    <section class="getting-started" id="get-started">
+        <h2 class="section-title">Get Started</h2>
+        <div class="chat-box">
+            <h3>Chat with Us</h3>
+            <form class="chat-form">
+                <input type="text" class="chat-input" placeholder="Type your message here...">
+                <button type="submit" class="chat-submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="learn-more" id="learn-more">
+        <h2 class="section-title">Learn More</h2>
+        <div class="learn-more-content">
+            <p class="learn-more-description">Discover how Engage360 can transform your workplace culture and boost employee engagement. Our AI-powered platform provides actionable insights and tools to create a thriving work environment.</p>
+            <a href="#" class="cta-primary">Download Whitepaper</a>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2 class="section-title">Pricing Plans</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 class="pricing-title">Starter</h3>
+                <p class="pricing-price">$99/mo</p>
+                <ul class="pricing-features">
+                    <li>Basic AI insights</li>
+                    <li>Up to 50 employees</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="#" class="pricing-cta">Choose Plan</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="pricing-title">Pro</h3>
+                <p class="pricing-price">$299/mo</p>
+                <ul class="pricing-features">
+                    <li>Advanced AI insights</li>
+                    <li>Up to 250 employees</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#" class="pricing-cta">Choose Plan</a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="pricing-title">Enterprise</h3>
+                <p class="pricing-price">Custom</p>
+                <ul class="pricing-features">
+                    <li>Full AI suite</li>
+                    <li>Unlimited employees</li>
+                    <li>Dedicated account manager</li>
+                </ul>
+                <a href="#" class="pricing-cta">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <h2 class="section-title">Get in Touch</h2>
         <form class="contact-form">
@@ -481,6 +658,7 @@
                 <a href="#about">About</a>
                 <a href="#features">Features</a>
                 <a href="#testimonials">Testimonials</a>
+                <a href="#pricing">Pricing</a>
                 <a href="#contact">Contact</a>
             </div>
             <p>&copy; 2025 Engage360. All rights reserved.</p>

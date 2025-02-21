@@ -277,6 +277,31 @@
             padding: 2rem;
         }
 
+        .chat-messages {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            max-width: 80%;
+        }
+
+        .message.user {
+            background-color: #60a5fa;
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .message.bot {
+            background-color: #e5e7eb;
+            color: #1a202c;
+        }
+
         .chat-form {
             display: flex;
             gap: 1rem;
@@ -466,6 +491,9 @@
             color: #60a5fa;
         }
 
+        : #60a5fa;
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -486,7 +514,6 @@
         <a href="#" class="logo">Engage360</a>
         <div class="nav-links">
             <a href="#features">Features</a>
-            
             <a href="#about">About</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#pricing">Pricing</a>
@@ -581,7 +608,11 @@
     <section class="getting-started" id="get-started">
         <h2 class="section-title">Get Started</h2>
         <div class="chat-box">
-            <h3>Chat with Us</h3>
+            <div class="chat-messages">
+                <div class="message bot">Hello! Welcome to Engage360. How can I assist you today?</div>
+                <div class="message user">Hi, I'm interested in learning more about your platform.</div>
+                <div class="message bot">Great! I'd be happy to help. What specific aspect of Engage360 would you like to know more about?</div>
+            </div>
             <form class="chat-form">
                 <input type="text" class="chat-input" placeholder="Type your message here...">
                 <button type="submit" class="chat-submit">Send</button>
@@ -593,7 +624,15 @@
         <h2 class="section-title">Learn More</h2>
         <div class="learn-more-content">
             <p class="learn-more-description">Discover how Engage360 can transform your workplace culture and boost employee engagement. Our AI-powered platform provides actionable insights and tools to create a thriving work environment.</p>
-            <a href="#" class="cta-primary">Download Whitepaper</a>
+            <p class="learn-more-description">With Engage360, you can:</p>
+            <ul class="learn-more-list">
+                <li>Gain real-time insights into employee sentiment and engagement levels</li>
+                <li>Identify and address potential issues before they impact productivity</li>
+                <li>Implement data-driven strategies to improve workplace culture</li>
+                <li>Measure the effectiveness of your engagement initiatives</li>
+                <li>Foster a more connected and motivated workforce</li>
+            </ul>
+            <p class="learn-more-description">Our team of experts is ready to guide you through the implementation process and help you maximize the benefits of our platform.</p>
         </div>
     </section>
 

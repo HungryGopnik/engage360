@@ -216,6 +216,106 @@
             font-size: 1.1rem;
         }
 
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: #f7fafc;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: #f7fafc;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         /* Footer */
         .footer {
             background: #1a202c;
@@ -330,12 +430,57 @@
         </div>
     </section>
 
+    <section class="about" id="about">
+        <h2 class="section-title">About Engage360</h2>
+        <div class="about-content">
+            <p class="about-description">Engage360 is a cutting-edge employee engagement platform that combines the power of AI with human-centered design. Our mission is to create thriving workplaces where employees feel valued, motivated, and connected to their organization's goals.</p>
+            <p class="about-description">Founded by a team of HR professionals and data scientists, Engage360 has been transforming workplace cultures since 2020. We believe that when employees are truly engaged, businesses flourish and individuals thrive.</p>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Engage360 has revolutionized how we approach employee engagement. The insights we've gained have been invaluable."</p>
+                <p class="testimonial-author">- Sarah Johnson, HR Director at TechCorp</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Since implementing Engage360, we've seen a significant boost in employee satisfaction and productivity. It's been a game-changer for us."</p>
+                <p class="testimonial-author">- Mark Thompson, CEO of InnovateCo</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The AI-powered insights from Engage360 have helped us address issues before they become problems. Our team is more connected than ever."</p>
+                <p class="testimonial-author">- Lisa Chen, COO of GrowthWorks</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
                 <a href="#about">About</a>
                 <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </div>
             <p>&copy; 2025 Engage360. All rights reserved.</p>
